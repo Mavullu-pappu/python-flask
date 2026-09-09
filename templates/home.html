@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <link href='{{url_for('static', filename='css/home.css')}}' rel='stylesheet'/>
+    </head>
+    <body>
+        <center>
+        <h1>This is home page</h1>
+        <nav>
+               <li> <a href="{{url_for('login')}}" name="login">Login </a></li>
+                <li><a href="{{url_for('contact')}}" name="contact">Contact</a></li>
+                <li><a href="{{url_for('signup')}}" name="signup">Signup</a></li>
+                <li><a href="{{url_for('data')}}" name="data">Data</a></li>
+        </nav>
+        </center>
+    </body>
+</html>

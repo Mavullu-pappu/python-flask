@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Data Page</title>
+    </head>
+    <link href='{{url_for('static', filename='css/data.css')}}' rel='stylesheet'/>
+    <center>
+    <body>
+        <h1>This is data page</h1>
+        
+        <table>
+            <tr>
+                <th>id</th>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>email</th>
+                <th>password</th>
+                <th>mobileno</th>
+                <th>location</th>
+                <th>zipcode</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            {% for emp in result %}
+            <tr>
+                <td>{{ emp[0] }}</td>
+                <td>{{ emp[1] }}</td>
+                <td>{{ emp[2] }}</td>
+                <td>{{ emp[3] }}</td>
+                <td>{{ emp[4] }}</td>
+                <td>{{ emp[5] }}</td>
+                <td>{{ emp[6] }}</td>
+                <td>{{emp[7]}}</td>
+                <td><a href="{{ url_for('update', id=emp[0]) }}">Update</a></td>
+                <td><a><a href="{{ url_for('delete', id=emp[0]) }}"
+                    onclick='return confirm("Are you really want to delecte")'>Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    
+
+    </body>
+    </center>
+</html>
