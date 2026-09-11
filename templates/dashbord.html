@@ -2,10 +2,18 @@
     <head>
         <title>Dashboard Page</title>
     </head>
-    <link href='{{url_for('static', filename='css/dashboard.css')}}' rel='stylesheet'/>
+    <link href='{{url_for('static', filename='css/dashbord.css')}}' rel='stylesheet'/>
     <body>
         <h1>This is dashboard page</h1>
         <a href='{{url_for('logout')}}'>Logout</a>
+        <nav>
+            <img src="{{url_for('static',filename='images/apple.jpg')}}"/>
+               <li> <a href="{{url_for('data')}}" name="data">Data</a></li>
+                <li><a href="{{url_for('contact')}}" name="contact">Contact</a></li>
+                <li><a href="{{url_for('home')}}" name="home">Home</a></li>
+                
+        </nav>
+
         
     </body>
 </html>
